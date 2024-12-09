@@ -1,0 +1,173 @@
+* {
+  margin: 0 auto;
+  padding: 0 auto;
+  box-sizing: border-box;
+}
+html {
+  font-size: 65.2%;
+}
+body {
+  background-color: #973d00;
+  font-size: 16px;
+  padding: 3%;
+  height: 100%;
+}
+.back-to-digital-cv {
+  position: absolute;
+  right: 5%;
+  top: 10%;
+}
+.back-to-digital-cv:link,
+.back-to-digital-cv:visited {
+  text-decoration: none;
+  background-color: #973d00;
+  color: beige;
+  padding: 0 1rem;
+}
+.back-to-digital-cv:hover,
+.back-to-digital-cv:active {
+  background-color: beige;
+  color: #973d00;
+  padding: 0 1rem;
+}
+/* General */
+.project {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 3rem;
+}
+.project-item {
+  background-color: #ffd8a8;
+  width: 100%;
+  padding: 1rem;
+}
+.timeline {
+  grid-row: span 2;
+}
+.headline {
+  border-bottom: 0.2rem solid #973d00;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.content-goals {
+  margin: 0 1rem;
+}
+ul {
+  list-style: none;
+}
+/* Goals */
+.goals-item {
+  border-bottom: 0.1rem solid #973d00;
+  align-items: center;
+}
+.teams-item,
+.primary-item {
+  align-items: center;
+}
+.goals-item-icon {
+  font-size: 4.4rem;
+  text-align: center;
+}
+.teams-item-icon,
+.primary-item-icon {
+  font-size: 3.2rem;
+  text-align: center;
+}
+
+ol {
+  list-style-type: none; /* Loại bỏ dấu mặc định */
+  counter-reset: list-counter; /* Khởi tạo bộ đếm */
+  padding-left: 0; /* Loại bỏ khoảng cách mặc định của <ol> */
+}
+
+ol li {
+  counter-increment: list-counter; /* Tăng giá trị bộ đếm cho mỗi <li> */
+  position: relative;
+  padding-left: 3rem; /* Chừa không gian để hiển thị số */
+  margin-bottom: 2rem;
+}
+
+ol li::before {
+  content: "0" counter(list-counter); /* Hiển thị số với tiền tố "0" */
+  position: absolute;
+  font-weight: bold;
+  color: #000; /* Tùy chỉnh màu sắc số */
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Căn giữa theo chiều dọc */
+  width: 3rem; /* Chiều rộng cho khung số */
+  height: 3rem; /* Chiều cao cho khung số */
+  background-color: #973d00; /* Nền màu xanh */
+  color: white; /* Màu chữ */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Làm tròn góc (thành hình tròn) */
+}
+.li-timeline {
+  font-size: 1.2rem;
+}
+.li-content-timeline {
+  margin-left: 1.5rem;
+  border-bottom: 0.1rem solid #973d00;
+}
+.li-title {
+  display: block;
+}
+.teams-icon {
+  font-size: 100%;
+}
+.content-item-scopes {
+  margin: 0 2rem;
+}
+
+@media (max-width: 991px) {
+  .project {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: repeat(5, 1fr); */
+  }
+  .headline h2 {
+    font-size: 3.2rem;
+  }
+  .goals-item,
+  .content-item-scopes,
+  .teams-item,
+  .primary-item,
+  .li-timeline {
+    display: block;
+    line-height: 4rem;
+    margin-bottom: 1rem;
+  }
+  .goals-line h4,
+  .goals-line p,
+  .teams-line h4,
+  .teams-line p,
+  .li-title,
+  .li-description,
+  .scopes-line h3,
+  .scopes-line p,
+  .content-item-primary {
+    font-size: 2rem;
+  }
+  .li-content-timeline {
+    margin-top: 5rem;
+  }
+  .content-item-scopes {
+    margin: 0 6rem;
+  }
+  .scopes-line h3 {
+    font-size: 2.8rem;
+  }
+  .ol-timeline {
+    margin-left: -2%;
+    margin-right: 5%;
+  }
+  ol li::before {
+    /* margin-left: 40px; */
+    left: 8%;
+    top: -15%;
+  }
+}
