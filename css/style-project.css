@@ -167,7 +167,7 @@ ol li::before {
   }
   ol li::before {
     /* margin-left: 40px; */
-    left: 8%;
+    left: 4.5rem;
     top: -15%;
   }
 }
