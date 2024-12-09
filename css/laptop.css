@@ -510,8 +510,8 @@ table {
   font-style: italic;
 }
 
-.contact-item a:hover,
-.contact-item a:active {
+.contact-item:hover,
+.contact-item:active {
   background-color: #973d00;
   color: #ffd8a8;
 }
